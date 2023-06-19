@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Contact</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="contact">
+            <h2>Contact Me</h2>
+            {% if success %}
+                <p>Thank you for your message {{ name }}!</p>
+            {% endif %}
+            <form method="POST" action="/contact">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+                <label for="message">Message</label>
+                <textarea name="message" id="message" rows="5" required></textarea>
+                <input type="submit" value="Send">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 - Portfolio Website</p>
+    </footer>
+</body>
+</html>

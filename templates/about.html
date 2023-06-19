@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | About</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="about">
+            <h1>About Me</h1>
+            <img src="{{ url_for('static', filename='images/profile.jpeg') }}" alt="Profile Picture">
+            <p>I am a Front-end Developer. I have a bachelor's degree in Information Technology and I am passionate about solving challenging problems using technology.</p>
+            <p>In my free time, I enjoy reading books, watching movies, and playing video games. I am also interested in photography and travel.</p>
+        </section>
+        <section class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Web development</li>
+                <li>Programming languages: Python, Java, JavaScript</li>
+                <li>Database systems: SQL, MongoDB</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 - Portfolio Website</p>
+    </footer>
+</body>
+</html>
